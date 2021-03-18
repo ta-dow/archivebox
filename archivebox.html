@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<title>ArchiveBox</title>
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="static/css/main.css">
+	</head>
+	<body>
+        <div class="container">
+	        <center>
+	        	<br><br><br><br>
+	        	<img src="static/images/archievebox-text.png" style="width: 100%;">
+	        	<hr>
+	        	<br><br>
+	        	<h5>Open source self-hosted web archiving. Takes browser history/bookmarks/Pocket/Pinboard/etc., saves HTML, JS, PDFs, media, and more.</h5>
+	        	<img src="static/images/4nkFjdv.png" style="width: 8%">
+	        	<br><br>
+            	<nav class="navbar navbar-light">
+            		<a class="nav-link" href="https://github.com/ArchiveBox/ArchiveBox/wiki/Quickstart">Quickstart</a>
+            		<a class="nav-link" href="#">Demo</a>
+            		<a class="nav-link" href="https://github.com/ArchiveBox/ArchiveBox">Github</a>
+            		<a class="nav-link" href="https://github.com/ArchiveBox/ArchiveBox/wiki">Documentation</a>
+            		<a class="nav-link" href="https://github.com/ArchiveBox/ArchiveBox#background--motivation">Info & Motivation</a>
+            		<a class="nav-link" href="https://github.com/ArchiveBox/ArchiveBox/wiki/Web-Archiving-Community">Community</a>
+            		<a class="nav-link" href="https://github.com/ArchiveBox/ArchiveBox/wiki/Roadmap">Roadmap</a>
+	        	</nav>
+	        	<br>
+	        	<div>
+		        	<img src="static/images/Open_source-MIT-green.svg">
+		        	<img src="static/images/ArchiveBox.svg">
+		        	<img src="static/images/Python-_=3.7-yellow.svg">
+		        	<img src="static/images/Chromium-_=59-orange.svg">
+		        	<img src="static/images/docker-all-platforms.svg">
+		        	<br>
+		        	<img src="static/images/ArchiveBox(1).svg">
+		        	<img src="static/images/ArchiveBox(2).svg">
+		        	<img src="static/images/ArchiveBox(3).svg">
+		        	<img src="static/images/ArchiveBox(4).svg">
+		        </div>
+	        </center>
+	        <br><br>
+        	<p>
+        		ArchiveBox is a powerful self-hosted internet archiving solution written in Python. You feed it URLs of pages you want to archive, and it saves them to disk in a variety of formats depending on setup and content within.
+
+        	</p>
+        	<br><br>
+        	<h5>
+        		Run ArchiveBox via Docker Compose (recommended), Docker, Apt, Brew, or Pip (see below).
+        	</h5>
+	    	<code>
+	    		apt/brew/pip3 install archivebox 
+	    		<br><br>
+	    		archivebox init # run this in an empty folder 
+	    		<br>
+	    		archivebox add 'https://example.com' # start adding URLs to archive 
+	    		<br>
+	    		curl https://example.com/rss.xml | archivebox add  # or add via stdin 
+	    		<br>
+	    		archivebox schedule --every=day https://example.com/rss.xml
+	    	</code>
+	    	<br><br>
+	    	<p>
+	    		For each URL added, ArchiveBox saves several types of HTML snapshot (wget, Chrome headless, singlefile), a PDF, a screenshot, a WARC archive, any git repositories, images, audio, video, subtitles, article text, and more….
+	    	</p>
+			<code>
+				archivebox server --createsuperuser 0.0.0.0:8000 # use the interactive web UI
+				<br>
+				archivebox list 'https://example.com' # use the CLI commands (--help for more)
+				<br>
+				ls ./archive/*/index.json # or browse directly via the filesystem
+	    	</code>
+	    	<br><br>
+	    	<p>
+	    		You can then manage your snapshots via the <a href="https://github.com/ArchiveBox/ArchiveBox/wiki/Usage#disk-layout">filesystem</a>, <a href="https://github.com/ArchiveBox/ArchiveBox/wiki/Usage#CLI-Usage">CLI</a>, <a href="https://github.com/ArchiveBox/ArchiveBox/wiki/Usage#UI-Usage">Web UI</a>, <a href="https://github.com/ArchiveBox/ArchiveBox/blob/dev/archivebox/core/models.py">SQLite DB</a> (./index.sqlite3), <a href="https://docs.archivebox.io/en/latest/modules.html">Python API</a> (alpha), <a href="https://github.com/ArchiveBox/ArchiveBox/issues/496">REST API</a> (alpha), or <a href="https://github.com/ArchiveBox/electron-archivebox">desktop app</a> (alpha).
+	    		<br><br>
+				At the end of the day, the goal is to sleep soundly knowing that the part of the internet you care about will be automatically preserved in multiple, durable long-term formats that will be accessible for decades (or longer).
+			</p>
+			<br><br>
+			<hr>
+			<br><br>
+			<!-- <h5>CLI Usage</h5>
+			<br>
+			<code>
+				# archivebox [subcommand] [--args]<br>
+				archivebox --version<br>
+				archivebox help
+			</code>
+			<br>
+			<ul>
+				<li>archivebox init/version/status/config/manage to administer your collection</li>
+				<li>archivebox add/remove/update/list to manage Snapshots in the archive</li>
+				<li>archivebox schedule to pull in fresh URLs in regularly from boorkmarks/history/Pocket/Pinboard/RSS/etc.</li>
+				<li>archivebox oneshot archive single URLs without starting a whole collection</li>
+				<li>archivebox shell/manage dbshell open a REPL to use the Python API (alpha), or SQL API</li>
+			</ul>
+			<br>
+			<img src="static/images/JXXxFzB.png" style="width: 100%;">
+			<br><br><br>
+			<hr>
+			<br> -->
+			<!-- <img src="static/images/coin_eagle.svg" style="width: 100px"> -->
+			<p>🖥  <b>Supported OSs:</b> Linux/BSD, macOS, Windows     🎮  <b>CPU Architectures:</b> x86, amd64, arm7, arm8 (raspi >=3) 📦  <b>Distributions:</b> docker/apt/brew/pip3/npm (in order of completeness)</p>
+			<br>
+			<!-- Background & Motivation -->
+			<p>
+				Vast treasure troves of knowledge are lost every day on the internet to link rot. As a society, we have an imperative to preserve some important parts of that treasure, just like we preserve our books, paintings, and music in physical libraries long after the originals go out of print or fade into obscurity.
+				<br><br>
+				Whether it’s to resist censorship by saving articles before they get taken down or edited, or just to save a collection of early 2010’s flash games you love to play, having the tools to archive internet content enables to you save the stuff you care most about before it disappears.
+				<br><br>
+				The balance between the permanence and ephemeral nature of content on the internet is part of what makes it beautiful. I don’t think everything should be preserved in an automated fashion, making all content permanent and never removable, but I do think people should be able to decide for themselves and effectively archive specific content that they care about.
+				<br><br>
+				Because modern websites are complicated and often rely on dynamic content, ArchiveBox archives the sites in several different formats beyond what public archiving services like Archive.org and Archive.is are capable of saving. Using multiple methods and the market-dominant browser to execute JS ensures we can save even the most complex, finicky websites in at least a few high-quality, long-term data formats.
+				<br><br>
+				All the archived links are stored by date bookmarked in ./archive/, and everything is indexed nicely with JSON & HTML files. The intent is for all the content to be viewable with common software in 50 - 100 years without needing to run ArchiveBox in a VM.
+			</p>
+    	</div>
+    	<br><br><br><br>
+    </body>
+    <footer>
+    	<center>
+    		<a href="https://www.patreon.com/theSquashSH" target="_blank">
+		    	<img src="static/images/icon_patreon.png">
+		    </a>
+		    <a href="https://github.com/ArchiveBox/ArchiveBox" target="_blank">
+		    	<img src="static/images/icon_github.png">
+		    </a>
+		    <a href="https://twitter.com/ArchiveBoxApp" target="_blank">
+		    	<img src="static/images/icon_twitter.png">
+		    </a>
+	    </center>
+    </footer>
+	<br><br>
+</html>
