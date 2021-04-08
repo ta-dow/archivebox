@@ -3,25 +3,40 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    /*font-family: 'Roboto Mono', monospace;*/
+    font-family: 'Lato', sans-serif;
     font-size: 20px;
     line-height: 1.3;
     background-color: #fcfcfc;
+    scroll-behavior: smooth;
 }
 a, a:hover {
     color: initial;
     text-decoration: none;
 }
 code {
-	color: initial;
 	display: block;
-	background-color: #efefef;
+	background-color: #2F2F2F;
+    color: #cecece;
 	padding: 20px;
 	line-height: 1.5;
+    border-radius: 8px;
+    padding: 35px;
 }
-footer img {
+code span {
+    color: #BA8E11;
+}
+
+footer a, footer a:hover{
+    color: #cecece;
+}
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+.social-media {
 	width: 40px;
 	margin: 20px;
+    filter: invert(1);
 }
 .main-img {
     border-radius: 4px;
@@ -31,3 +46,111 @@ footer img {
                 0 8px 8px rgba(0,0,0,0.08),
                 0 16px 16px rgba(0,0,0,0.08);
 }
+.cover-img {
+    width: 100%;
+    object-fit: cover;
+    height: 600px;
+    filter: brightness(0.5);
+    position: relative;
+}
+.cover-title-box {
+    position: relative;
+    height: 200px;
+    top: -180px;
+    z-index: 1000;
+    background-color: #fcfcfc;
+    border-radius: 8px;
+}
+.cover-title {
+    font-family: Playfair Display;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 90px;
+    padding: 50px;
+    margin-left: 80px;
+}
+.cover-logo {
+    width: 100px;
+    float: right;
+    margin-right: 80px;
+}
+
+.coin {
+    width: 150px;
+    margin: 30px;
+}
+
+/*Button*/
+a.btn {
+    color: black;
+}
+.beta-btn {
+    display: inline-block;
+    margin: 2rem;
+}
+.btn {
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 6px;
+}
+.btn-shadow.btn-success:hover,
+.btn-shadow.btn-outline-success:hover {
+    background-color: #f9f9f9;
+}
+.btn-shadow.btn-success:hover,
+.btn-shadow.btn-outline-success:hover {
+    -webkit-box-shadow: 5px 5px 0 #d4d8d6, 4px 4px 0 #d4d8d6, 3px 3px 0 #d4d8d6, 2px 2px 0 #d4d8d6, 1px 1px 0 #d4d8d6;
+    box-shadow: 5px 5px 0 #d4d8d6, 4px 4px 0 #d4d8d6, 3px 3px 0 #d4d8d6, 2px 2px 0 #d4d8d6, 1px 1px 0 #d4d8d6;
+    -webkit-transform: translate(-2px, -2px);
+    -o-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.btn-shadow.btn-success,
+.btn-shadow.btn-success.focus,
+.btn-shadow.btn-success:focus,
+.btn-shadow.btn-outline-success,
+.btn-shadow.btn-outline-success.focus,
+.btn-shadow.btn-outline-success:focus {
+    -webkit-box-shadow: 3px 3px 0 #d4d8d6, 2px 2px 0 #d4d8d6, 1px 1px 0 #d4d8d6;
+    box-shadow: 3px 3px 0 #d4d8d6, 2px 2px 0 #d4d8d6, 1px 1px 0 #d4d8d6;
+}
+.btn-shadow.btn-success,
+.btn-shadow.btn-outline-success {
+    border-color: #d4d8d6;
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+    background-color: white; 
+}
+.btn-success:hover {
+    color: black;
+    border-color: black; 
+}
+.beta-btn {
+    margin: inherit;
+}
+@media(max-width:575px) {
+    center a.beta-btn {
+        margin: 2rem 0;
+        font-size: 12px;
+    }
+}
+
+/*
+TODO
+- decrease space below .cover-title-box
+- add green text color to code
+- add info text
+- add hover effect to logo
+- emphasize donate button
+- add yellow tone
+- add more screenshots
+- explain coins?
+*/
+
