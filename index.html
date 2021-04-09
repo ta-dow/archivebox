@@ -7,16 +7,14 @@
         <link rel="stylesheet" type="text/css" href="static/css/main.css">
 	</head>
 	<body>
-    	<img src="static/images/code_cover.png" class="cover-img">
+    	<img src="static/images/library.jpg" class="cover-img">
         <div class="container">
 	        <center>
 		    	<div class="cover-title-box">
-		    		<a href="https://www.patreon.com/theSquashSH" target="_blank">
-		    			<img src="static/images/cover-logo.png" class="cover-logo">
-		    		</a>
-		    		<h1 class="cover-title" id="home">ArchiveBox</h1>
+	    			<img src="static/images/cover-logo.png" class="cover-logo">
+		    		<h1 id="home">ArchiveBox</h1>
 		    	</div>
-	        	<h5>Open source self-hosted web archiving. Takes browser history/bookmarks/Pocket/Pinboard/etc., saves HTML, JS, PDFs, media, and more.</h5>
+	        	<h5>Open source self-hosted web archiving. Takes browser history, bookmarks, Pocket, Pinboard, etc., saves HTML, JS, PDFs, media, and more.</h5>
 		        <br><br>
 	        	<p>
 	        		ArchiveBox is a powerful self-hosted internet archiving solution written in Python. You feed it URLs of pages you want to archive, and it saves them to disk in a variety of formats depending on setup and content within.
@@ -24,14 +22,14 @@
 	        	</p>
 	        	<br>
             	<nav class="navbar navbar-light">
-            		<a class="nav-link beta-btn nav-link btn btn-success btn-shadow" href="https://github.com/ArchiveBox/ArchiveBox/wiki/Quickstart" target="_blank">Quickstart</a>
-            		<a class="nav-link beta-btn nav-link btn btn-success btn-shadow" href="https://www.patreon.com/theSquashSH" target="_blank">Donate</a>
-            		<a class="nav-link beta-btn nav-link btn btn-success btn-shadow" href="#">Demo</a>
-            		<a class="nav-link beta-btn nav-link btn btn-success btn-shadow" href="https://github.com/ArchiveBox/ArchiveBox" target="_blank">Github</a>
-            		<a class="nav-link beta-btn nav-link btn btn-success btn-shadow" href="https://github.com/ArchiveBox/ArchiveBox/wiki" target="_blank">Docs</a>
-            		<a class="nav-link beta-btn nav-link btn btn-success btn-shadow" href="https://github.com/ArchiveBox/ArchiveBox#background--motivation" target="_blank">Info & Motivation</a>
-            		<a class="nav-link beta-btn nav-link btn btn-success btn-shadow" href="https://github.com/ArchiveBox/ArchiveBox/wiki/Web-Archiving-Community" target="_blank">Community</a>
-            		<a class="nav-link beta-btn nav-link btn btn-success btn-shadow" href="https://github.com/ArchiveBox/ArchiveBox/wiki/Roadmap" target="_blank">Roadmap</a>
+            		<a role="button" class="nav-link beta-btn nav-link btn btn-success btn-shadow" href="https://github.com/ArchiveBox/ArchiveBox/wiki/Quickstart" target="_blank">Quickstart</a>
+            		<a role="button" class="nav-link beta-btn nav-link btn btn-success btn-shadow" href="https://www.patreon.com/theSquashSH" target="_blank">Donate</a>
+            		<a role="button" class="nav-link beta-btn nav-link btn btn-success btn-shadow" href="#">Demo</a>
+            		<a role="button" class="nav-link beta-btn nav-link btn btn-success btn-shadow" href="https://github.com/ArchiveBox/ArchiveBox" target="_blank">Github</a>
+            		<a role="button" class="nav-link beta-btn nav-link btn btn-success btn-shadow" href="https://github.com/ArchiveBox/ArchiveBox/wiki" target="_blank">Docs</a>
+            		<a role="button" class="nav-link beta-btn nav-link btn btn-success btn-shadow" href="https://github.com/ArchiveBox/ArchiveBox#background--motivation" target="_blank">Info & Motivation</a>
+            		<a role="button" class="nav-link beta-btn nav-link btn btn-success btn-shadow" href="https://github.com/ArchiveBox/ArchiveBox/wiki/Web-Archiving-Community" target="_blank">Community</a>
+            		<a role="button" class="nav-link beta-btn nav-link btn btn-success btn-shadow" href="https://github.com/ArchiveBox/ArchiveBox/wiki/Roadmap" target="_blank">Roadmap</a>
 	        	</nav>
 	        </center>
         	<br><br><br><br>
@@ -41,13 +39,13 @@
 	    	<code>
 	    		apt/brew/pip3 install archivebox 
 	    		<br><br>
-	    		archivebox init <span>--setup</span> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp # run this in an empty folder 
+	    		archivebox init <span class="code-yellow">--setup</span> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp # run this in an empty folder 
 	    		<br>
-	    		archivebox add <span>'https://example.com'</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp# start adding URLs to archive 
+	    		archivebox add <span class="code-blue">'https://example.com'</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp# start adding URLs to archive 
 	    		<br>
 	    		curl https://example.com/rss.xml | archivebox add  # or add via stdin 
 	    		<br>
-	    		archivebox schedule <span>--every</span>=day https://example.com/rss.xml
+	    		archivebox schedule <span class="code-yellow">--every</span>=day https://example.com/rss.xml
 	    	</code>
 	    	<br><br>
 	    	<p>
@@ -56,13 +54,13 @@
 			<code>
 				archivebox server --createsuperuser 0.0.0.0:8000 # use the interactive web UI
 				<br>
-				archivebox list <span>'https://example.com'</span> # use the CLI commands (--help for more)
+				archivebox list <span class="code-blue">'https://example.com'</span> # use the CLI commands (--help for more)
 				<br>
 				ls ./archive/*/index.json # or browse directly via the filesystem
 	    	</code>
 	    	<br><br>
 	    	<p>
-	    		You can then manage your snapshots via the <a href="https://github.com/ArchiveBox/ArchiveBox/wiki/Usage#disk-layout">filesystem</a>, <a href="https://github.com/ArchiveBox/ArchiveBox/wiki/Usage#CLI-Usage">CLI</a>, <a href="https://github.com/ArchiveBox/ArchiveBox/wiki/Usage#UI-Usage">Web UI</a>, <a href="https://github.com/ArchiveBox/ArchiveBox/blob/dev/archivebox/core/models.py">SQLite DB</a> (./index.sqlite3), <a href="https://docs.archivebox.io/en/latest/modules.html">Python API</a> (alpha), <a href="https://github.com/ArchiveBox/ArchiveBox/issues/496">REST API</a> (alpha), or <a href="https://github.com/ArchiveBox/electron-archivebox">desktop app</a> (alpha).
+	    		You can then manage your snapshots via the <a href="https://github.com/ArchiveBox/ArchiveBox/wiki/Usage#disk-layout" class="underline-highlight">filesystem</a>, <a href="https://github.com/ArchiveBox/ArchiveBox/wiki/Usage#CLI-Usage" class="underline-highlight">CLI</a>, <a href="https://github.com/ArchiveBox/ArchiveBox/wiki/Usage#UI-Usage" class="underline-highlight">Web UI</a>, <a href="https://github.com/ArchiveBox/ArchiveBox/blob/dev/archivebox/core/models.py" class="underline-highlight">SQLite DB</a> (./index.sqlite3), <a href="https://docs.archivebox.io/en/latest/modules.html" class="underline-highlight">Python API</a> (alpha), <a href="https://github.com/ArchiveBox/ArchiveBox/issues/496" class="underline-highlight">REST API</a> (alpha), or <a href="https://github.com/ArchiveBox/electron-archivebox" class="underline-highlight">desktop app</a> (alpha).
 	    		<br><br>
 				At the end of the day, the goal is to sleep soundly knowing that the part of the internet you care about will be automatically preserved in multiple, durable long-term formats that will be accessible for decades (or longer).
 			</p>
@@ -73,27 +71,6 @@
 				<img src="static/images/coin_warrior.png" class="coin">
 			</center>
 			<br><br>
-			<!-- <h5>CLI Usage</h5>
-			<br>
-			<code>
-				# archivebox [subcommand] [--args]<br>
-				archivebox --version<br>
-				archivebox help
-			</code>
-			<br>
-			<ul>
-				<li>archivebox init/version/status/config/manage to administer your collection</li>
-				<li>archivebox add/remove/update/list to manage Snapshots in the archive</li>
-				<li>archivebox schedule to pull in fresh URLs in regularly from boorkmarks/history/Pocket/Pinboard/RSS/etc.</li>
-				<li>archivebox oneshot archive single URLs without starting a whole collection</li>
-				<li>archivebox shell/manage dbshell open a REPL to use the Python API (alpha), or SQL API</li>
-			</ul>
-			<br>
-			<img src="static/images/JXXxFzB.png" style="width: 100%;">
-			<br><br><br>
-			<hr>
-			<br> -->
-			<!-- <img src="static/images/coin_eagle.svg" style="width: 100px"> -->
 			<p>🖥  <b>Supported OSs:</b> Linux/BSD, macOS, Windows     🎮  <b>CPU Architectures:</b> x86, amd64, arm7, arm8 (raspi >=3) 📦  <b>Distributions:</b> docker/apt/brew/pip3/npm (in order of completeness)</p>
 			<br>
 			<!-- Background & Motivation -->
@@ -139,7 +116,7 @@
 			    </a>
 			    <br><br>
 			    <a href="#home">
-				    <h6>ArchiveBox © 2021</h6>
+				    <h6 class="font-weight-light">ArchiveBox © 2021</h6>
 				    <br><br>
 				</a>
 			</div>

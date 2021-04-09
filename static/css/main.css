@@ -22,8 +22,14 @@ code {
     border-radius: 8px;
     padding: 35px;
 }
-code span {
-    color: #BA8E11;
+.code-yellow {
+    color: #EBE500;
+}
+.code-green {
+    color: #36E700;
+}
+.code-blue {
+    color: #21B5B7;
 }
 
 footer a, footer a:hover{
@@ -61,7 +67,7 @@ footer a, footer a:hover{
     background-color: #fcfcfc;
     border-radius: 8px;
 }
-.cover-title {
+.cover-title-box h1 {
     font-family: Playfair Display;
     text-transform: uppercase;
     text-align: center;
@@ -135,22 +141,68 @@ a.btn {
 .beta-btn {
     margin: inherit;
 }
-@media(max-width:575px) {
-    center a.beta-btn {
-        margin: 2rem 0;
-        font-size: 12px;
+
+/*Highlight*/
+.underline-highlight {
+    padding: 0 5px;
+    background-image: linear-gradient( transparent 0%, transparent calc(50% - 8px), rgba(33,181,183, 0.5) calc(50% - 8px), rgba(33,181,183, 0.5) 100% );
+    transition: background-position 0.25s ease-in-out, padding 0.25s ease-in-out;
+    background-size: 100% 260%;
+    background-position: 0 0;
+}
+.underline-highlight:hover {
+    padding: 2px 5px 4px 5px;
+    background-image: linear-gradient( transparent 0%, transparent calc(50% - 8px), rgba(33,181,183, 0.7) calc(50% - 8px), rgba(33,181,183, 0.7) 100% );
+    background-position: 0 100%;
+}
+@media (min-width: 992px) {
+    .effect-underline:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: -5px;
+        left: 0;
+        background-color: #000;
+        visibility: hidden;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s;
+    }
+    .effect-underline:hover:before {
+        visibility: visible;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+}
+
+
+@media(max-width:991px) {
+    .navbar {
+        display: none;
+    }
+    .cover-title-box h1 {
+        font-size: 40px;
+        margin-left: 0;
+    }
+    .cover-logo {
+        float: initial;
+        margin-right: 0;
     }
 }
 
 /*
 TODO
+- create mobile dropdown navbar
 - decrease space below .cover-title-box
-- add green text color to code
-- add info text
-- add hover effect to logo
 - emphasize donate button
+- add info text
 - add yellow tone
 - add more screenshots
-- explain coins?
+- improve accessibility of nav button with tabindex="0"
+- add hover effect to logo?
+- explain coins
+- change cover photo
 */
 
