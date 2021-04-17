@@ -136,7 +136,7 @@ a.btn {
 }
 .btn-success:hover {
     color: black;
-    border-color: black; 
+    border-color: #a2a0a0; 
 }
 .beta-btn {
     margin: inherit;
@@ -177,7 +177,6 @@ a.btn {
     }
 }
 
-
 @media(max-width:991px) {
     .navbar {
         display: none;
@@ -198,6 +197,8 @@ TODO
 - decrease space below .cover-title-box
 - emphasize donate button
 - add info text
+    - Quickstart (emphasize docker compose)
+    - input formats (no code)
 - add yellow tone
 - add more screenshots
 - improve accessibility of nav button with tabindex="0"
